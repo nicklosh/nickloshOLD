@@ -1,0 +1,207 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import "base";
+
+html { 
+	@include background(image-url("/img/bull3d.png") no-repeat center 140px,
+	linear-gradient(top, #303030, #1a1a1a)); 
+	min-height: 100%;
+	min-width: $minwidth;
+	&.splash{background: black;}
+}
+
+
+body {
+	margin:0 auto;
+	min-width: $minwidth;
+	padding-bottom: 70px;
+	} 
+
+header{
+	width: $minwidth;
+	margin: 0 auto;
+	h1{
+		text-align:center; 
+		font-size:60px; 
+		font-family: $font;
+		font-weight: lighter;
+		width: $minwidth;
+		padding: 30px 0 10px;
+		a {
+			color: $white;
+			@include single-text-shadow;
+		} 
+	}
+	hr{ 
+		background-color: #000; 
+		color: #000;
+		height: 1px;
+		border: none;
+		@include box-shadow($midlightgray 0 1px 1px);
+	}
+	a {text-decoration:none;
+		&:hover{
+color: $red;
+			}
+		}
+
+	/*main nav*/
+	nav{
+		ul{
+			display: table;
+			margin: 20px auto 25px;
+			li{
+				font-family: $font;
+				font-weight: normal;
+				font-size: 30px;
+				@include single-text-shadow;
+				display: inline;
+				margin:0 10px;
+				a{
+					color: $midlightgray;
+					position: relative;
+					&.active:after{
+						position:absolute;
+						bottom: -23px;
+						left: 30%;
+						content:"";
+						border-style: solid;
+						border-width: 0 20px 20px 20px;
+						border-color: transparent transparent black transparent;
+					}
+				}
+			}
+		}
+	}
+}
+
+section {
+	width: $bodywidth;
+	margin: 0 auto;
+	display: none;
+	&.open{
+		background-color: #2d2d2d; 
+		border-bottom:1px solid $midgray;
+		@include box-shadow(inset 0 3px 30px 5px black);
+		@include border-radius(14px);
+	}
+	.container{
+		padding: 25px 25px 0;
+		display: inline-block;
+	}
+	.main{
+		width: 625px; 
+		height: 165px; 
+		background: $midlightgray; 
+		margin: 0 25px 25px 0; 
+		float: left; 
+		padding: 10px;
+		@include box-shadow(0 0 10px black); 
+		border-top: 1px solid $lightgray;
+		@include border-radius(14px);
+	}
+
+/* second navigation
+*/
+	nav{ 
+		width: 180px; 
+		float: left; 
+		margin: 0 0 25px;
+		font-family: $font;
+		font-size: 18px;
+		li{margin-bottom: 10px;
+			/*padding:  5px 5px 5px 35px;*/
+			&:last-child{margin-bottom:0;
+				}
+			}
+		a{
+			/*background: yellow;*/
+			display: block;
+			padding: 5px 5px 5px 35px;
+			color: $quitelight;
+			text-decoration: none;
+			@include single-text-shadow;
+			position: relative;
+			@include border-radius(14px);
+			&.playing{background: blue;}
+			&:before{
+				position:absolute;
+				top: 0;
+				left: 0;
+				content:"";
+				width: 28px;
+				height: 28px;
+				background-color: $quitelight;
+				@include box-shadow(0 0 10px black);
+				@include border-radius(14px); 
+
+			}
+			&:after{
+				position:absolute;
+				top: 5px;
+				left: 9px;
+				content:"";
+				width: 0;
+				height: 0;
+				border-top: 8px solid transparent;
+				border-bottom: 8px solid transparent;
+				border-left: 12px solid $midgray;
+
+			}
+			&.playing{
+				color: $midgray;
+				@include single-text-shadow(none);
+				background-color: $quitelight;
+				@include box-shadow(0 0 10px black);
+				&:before{
+					background:none;
+					@include box-shadow(none);
+
+				}
+				&:after{
+					@include box-shadow(none);
+					border-left: transparent;
+					border-right: 12px solid $midgray;
+				}
+			}
+			/*display: inline-block;*/
+		}
+	}
+}
+@media (max-width: 980px){
+	section{
+		width: 705px;
+	}
+	.main{
+		margin-right: 0;
+	}
+}
+
+
+footer{
+	@include box-shadow(#000000 0 0 10px);
+	background: $midgray;
+	border-top: 1px solid #444;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	ul{ 
+		display:table;
+		margin: 5px auto;
+		li{
+		display:inline;
+		padding: 0 10px;
+			a{
+			display: inline-block;
+			background: url(/img/socialsprite.png) 0 0 $quitelight;
+			&#youtube{background-position: 32px 0;}
+			&#facebook{background-position: 64px 0;}
+			height: 32px;
+			width: 32px;
+			@include border-radius(16px);
+			}
+		}
+	}
+}
