@@ -6,11 +6,11 @@ var textRed = function(){$(this).animate({color: "#ff0000"}, 200);}
 
 	// main nav
 	// hover on nav list
-	$("header nav li a").hover(
-		textRed,
-		function(){
-			$(this).animate({color: "#434343"}, 200);
-		});
+	// $("header nav li a").hover(
+	// 	textRed,
+	// 	function(){
+	// 		$(this).animate({color: "#434343"}, 200);
+	// 	});
 
 	// main navigation
 	$("header nav li").click(function(e){
@@ -24,7 +24,6 @@ var textRed = function(){$(this).animate({color: "#ff0000"}, 200);}
 		$(this).find('a').addClass('active');
 		$('section').slideDown();
 	});
-
 	// second nav
 	$('section.open').find('a')
 	// .hover(
@@ -37,7 +36,6 @@ var textRed = function(){$(this).animate({color: "#ff0000"}, 200);}
 		event.preventDefault();
 		$('a').removeClass('playing');
 		$(this).addClass('playing');
-		// $('.main').load('/sections/music/jungle.html');
 	});
 
 	// footer links

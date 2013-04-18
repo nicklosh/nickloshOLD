@@ -32,6 +32,9 @@ header{
 		a {
 			color: $white;
 			@include single-text-shadow;
+			&:hover{
+				color: $white;
+				}
 		} 
 	}
 	hr{ 
@@ -62,14 +65,17 @@ color: $red;
 				a{
 					color: $midlightgray;
 					position: relative;
-					&.active:after{
-						position:absolute;
-						bottom: -23px;
-						left: 30%;
-						content:"";
-						border-style: solid;
-						border-width: 0 20px 20px 20px;
-						border-color: transparent transparent black transparent;
+					&.active{
+						color: $white;
+						&:after{
+							position:absolute;
+							bottom: -23px;
+							left: 30%;
+							content:"";
+							border-style: solid;
+							border-width: 0 20px 20px 20px;
+							border-color: transparent transparent black transparent;
+						}
 					}
 				}
 			}
