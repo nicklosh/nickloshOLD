@@ -125,12 +125,16 @@ header hr {
 header a {
   text-decoration: none;
 }
-/* line 47, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
+header a:hover {
+  color: red;
+}
+/* line 52, ../sass/screen.scss */
 header nav ul {
   display: table;
   margin: 20px auto 25px;
 }
-/* line 50, ../sass/screen.scss */
+/* line 55, ../sass/screen.scss */
 header nav ul li {
   font-family: "Bernard MT Condensed", serif;
   font-weight: normal;
@@ -139,12 +143,12 @@ header nav ul li {
   display: inline;
   margin: 0 10px;
 }
-/* line 57, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 header nav ul li a {
   color: #434343;
   position: relative;
 }
-/* line 60, ../sass/screen.scss */
+/* line 65, ../sass/screen.scss */
 header nav ul li a.active:after {
   position: absolute;
   bottom: -23px;
@@ -155,25 +159,33 @@ header nav ul li a.active:after {
   border-color: transparent transparent black transparent;
 }
 
-/* line 75, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 section {
   width: 900px;
   margin: 0 auto;
+  display: none;
+  /* second navigation
+  */
 }
-/* line 78, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 section.open {
   background-color: #2d2d2d;
   border-bottom: 1px solid #303030;
   -webkit-box-shadow: inset 0 3px 30px 5px black;
   -moz-box-shadow: inset 0 3px 30px 5px black;
   box-shadow: inset 0 3px 30px 5px black;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+  border-radius: 14px;
 }
-/* line 83, ../sass/screen.scss */
+/* line 90, ../sass/screen.scss */
 section .container {
   padding: 25px 25px 0;
   display: inline-block;
 }
-/* line 87, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
 section .main {
   width: 625px;
   height: 165px;
@@ -185,25 +197,30 @@ section .main {
   -moz-box-shadow: 0 0 10px black;
   box-shadow: 0 0 10px black;
   border-top: 1px solid #676767;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+  border-radius: 14px;
 }
-/* line 97, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 section nav {
-  width: 170px;
+  width: 180px;
   float: left;
   margin: 0 0 25px;
   font-family: "Bernard MT Condensed", serif;
   font-size: 18px;
 }
-/* line 103, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 section nav li {
   margin-bottom: 10px;
   /*padding:  5px 5px 5px 35px;*/
 }
-/* line 105, ../sass/screen.scss */
+/* line 116, ../sass/screen.scss */
 section nav li:last-child {
   margin-bottom: 0;
 }
-/* line 108, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 section nav a {
   /*background: yellow;*/
   display: block;
@@ -212,66 +229,105 @@ section nav a {
   text-decoration: none;
   text-shadow: 2px 3px 3px black;
   position: relative;
-  -webkit-border-radius: 16px;
-  -moz-border-radius: 16px;
-  -ms-border-radius: 16px;
-  -o-border-radius: 16px;
-  border-radius: 16px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+  border-radius: 14px;
   /*display: inline-block;*/
 }
-/* line 118, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
+section nav a.playing {
+  background: blue;
+}
+/* line 129, ../sass/screen.scss */
+section nav a:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 28px;
+  height: 28px;
+  background-color: #969696;
+  -webkit-box-shadow: 0 0 10px black;
+  -moz-box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px black;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+  border-radius: 14px;
+}
+/* line 141, ../sass/screen.scss */
 section nav a:after {
   position: absolute;
   top: 5px;
-  left: 5px;
+  left: 9px;
   content: "";
   width: 0;
   height: 0;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
-  border-left: 12px solid black;
+  border-left: 12px solid #303030;
 }
-/* line 130, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 section nav a.playing {
-  background: #969696;
   color: #303030;
+  text-shadow: none;
+  background-color: #969696;
+  -webkit-box-shadow: 0 0 10px black;
+  -moz-box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px black;
 }
-/* line 133, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
+section nav a.playing:before {
+  background: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 163, ../sass/screen.scss */
 section nav a.playing:after {
-  position: absolute;
-  left: 5px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
   border-left: transparent;
-  border-right: 12px solid black;
+  border-right: 12px solid #303030;
 }
 
 @media (max-width: 980px) {
-  /* line 147, ../sass/screen.scss */
+  /* line 174, ../sass/screen.scss */
   section {
     width: 705px;
   }
+
+  /* line 177, ../sass/screen.scss */
+  .main {
+    margin-right: 0;
+  }
 }
-/* line 153, ../sass/screen.scss */
+/* line 183, ../sass/screen.scss */
 footer {
   -webkit-box-shadow: black 0 0 10px;
   -moz-box-shadow: black 0 0 10px;
   box-shadow: black 0 0 10px;
   background: #303030;
-  border-top: 1px solid #444;
+  border-top: 1px solid #444444;
   position: fixed;
   bottom: 0;
   width: 100%;
 }
-/* line 160, ../sass/screen.scss */
+/* line 190, ../sass/screen.scss */
 footer ul {
   display: table;
   margin: 5px auto;
 }
-/* line 163, ../sass/screen.scss */
+/* line 193, ../sass/screen.scss */
 footer ul li {
   display: inline;
   padding: 0 10px;
 }
-/* line 166, ../sass/screen.scss */
+/* line 196, ../sass/screen.scss */
 footer ul li a {
   display: inline-block;
   background: url(/img/socialsprite.png) 0 0 #969696;
@@ -283,11 +339,11 @@ footer ul li a {
   -o-border-radius: 16px;
   border-radius: 16px;
 }
-/* line 169, ../sass/screen.scss */
+/* line 199, ../sass/screen.scss */
 footer ul li a#youtube {
   background-position: 32px 0;
 }
-/* line 170, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 footer ul li a#facebook {
   background-position: 64px 0;
 }

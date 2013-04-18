@@ -41,7 +41,12 @@ header{
 		border: none;
 		@include box-shadow($midlightgray 0 1px 1px);
 	}
-	a {text-decoration:none;}
+	a {text-decoration:none;
+		&:hover{
+color: $red;
+			}
+		}
+
 	/*main nav*/
 	nav{
 		ul{
@@ -75,10 +80,12 @@ header{
 section {
 	width: $bodywidth;
 	margin: 0 auto;
+	display: none;
 	&.open{
 		background-color: #2d2d2d; 
 		border-bottom:1px solid $midgray;
 		@include box-shadow(inset 0 3px 30px 5px black);
+		@include border-radius(14px);
 	}
 	.container{
 		padding: 25px 25px 0;
@@ -93,9 +100,13 @@ section {
 		padding: 10px;
 		@include box-shadow(0 0 10px black); 
 		border-top: 1px solid $lightgray;
+		@include border-radius(14px);
 	}
+
+/* second navigation
+*/
 	nav{ 
-		width: 170px; 
+		width: 180px; 
 		float: left; 
 		margin: 0 0 25px;
 		font-family: $font;
@@ -114,30 +125,47 @@ section {
 			@include single-text-shadow;
 			position: relative;
 			@include border-radius(14px);
+			&.playing{background: blue;}
+			&:before{
+				position:absolute;
+				top: 0;
+				left: 0;
+				content:"";
+				width: 28px;
+				height: 28px;
+				background-color: $quitelight;
+				@include box-shadow(0 0 10px black);
+				@include border-radius(14px); 
+
+			}
 			&:after{
 				position:absolute;
 				top: 5px;
-				left: 5px;
+				left: 9px;
 				content:"";
 				width: 0;
 				height: 0;
 				border-top: 8px solid transparent;
 				border-bottom: 8px solid transparent;
-				border-left: 12px solid black;
+				border-left: 12px solid $midgray;
 
 			}
 			&.playing{
-				background: $quitelight;
 				color: $midgray;
-				&:after{
-					position:absolute;
-					left: 5px;
-					border-left: transparent;
-					border-right: 12px solid black;
+				@include single-text-shadow(none);
+				background-color: $quitelight;
+				@include box-shadow(0 0 10px black);
+				&:before{
+					background:none;
+					@include box-shadow(none);
 
 				}
+				&:after{
+					@include box-shadow(none);
+					border-left: transparent;
+					border-right: 12px solid $midgray;
+				}
 			}
-
 			/*display: inline-block;*/
 		}
 	}
@@ -145,6 +173,9 @@ section {
 @media (max-width: 980px){
 	section{
 		width: 705px;
+	}
+	.main{
+		margin-right: 0;
 	}
 }
 
