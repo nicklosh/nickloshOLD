@@ -9,7 +9,7 @@ html {
 	linear-gradient(top, #303030, #1a1a1a)); 
 	min-height: 100%;
 	min-width: $minwidth;
-	&.splash{background: black;}
+	&.splash{background: url(/img/bull-red-glow.png) no-repeat center 60px black;}
 }
 
 
@@ -22,6 +22,8 @@ body {
 header{
 	width: $minwidth;
 	margin: 0 auto;
+		position: relative;
+
 	h1{
 		text-align:center; 
 		font-size:60px; 
@@ -43,10 +45,11 @@ header{
 		height: 1px;
 		border: none;
 		@include box-shadow($midlightgray 0 1px 1px);
+		.splash &{@include box-shadow(none); }
 	}
 	a {text-decoration:none;
 		&:hover{
-color: $red;
+			color: $red;
 			}
 		}
 
@@ -64,6 +67,17 @@ color: $red;
 				margin:0 10px;
 				a{
 					color: $midlightgray;
+					.splash & {color: black; 
+						padding: 30px 280px 460px;
+						position: absolute;
+						top: 100px;
+						left: -60px;
+
+						&:hover{
+							color:$red;
+							background: url(/img/bull-red-glow-hover.png) no-repeat center; 
+							}
+						}
 					position: relative;
 					&.active{
 						color: $white;

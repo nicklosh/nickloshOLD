@@ -13,7 +13,7 @@ var textRed = function(){$(this).animate({color: "#ff0000"}, 200);}
 	// 	});
 
 	// main navigation
-	$("header nav li").click(function(e){
+	$("#main-nav li").click(function(e){
 		e.preventDefault();
 		var link = $(this).find('a').data('link');
 		var load = ('#'+link);
