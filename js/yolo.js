@@ -39,12 +39,12 @@ var textRed = function(){$(this).animate({color: "#ff0000"}, 200);}
 	});
 
 	// footer links
-	$("footer").find('a').hover(
-		function(){
-			$(this).animate({backgroundColor: "#ff0000"}, 200);
-		},
-		function(){
-			$(this).animate({backgroundColor:"#969696"}, 200);
-		}
-	);
+	// $("footer").find('a').hover(
+	// 	function(){
+	// 		$(this).animate({backgroundColor: "#ff0000"}, 200);
+	// 	},
+	// 	function(){
+	// 		$(this).animate({backgroundColor:"#969696"}, 200);
+	// 	}
+	// );
 });
