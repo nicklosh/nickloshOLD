@@ -113,7 +113,7 @@ section {
 	}
 	.main{
 		width: 625px; 
-		height: 165px; 
+		/*height: 165px; */
 		background: $midlightgray; 
 		margin: 0 25px 25px 0; 
 		float: left; 
@@ -121,6 +121,7 @@ section {
 		@include box-shadow(0 0 10px black); 
 		border-top: 1px solid $lightgray;
 		@include border-radius(14px);
+		display: none;
 	}
 
 /* second navigation

@@ -22,29 +22,17 @@ var textRed = function(){$(this).animate({color: "#ff0000"}, 200);}
 		$('.container').hide();
 		$(load).show();
 		$(this).find('a').addClass('active');
-		$('section').slideDown();
+		$('section').hide().slideDown();
 	});
 	// second nav
-	$('section.open').find('a')
-	// .hover(
-	// 	textRed,
-	// 	function(){
-	// 		$(this).animate({color:'#969696'})
-	// 	}
-	// )
-	.on('click', function(event){
+	$('section.open').find('a').on('click', function(event){
 		event.preventDefault();
+		var link = $(this).attr('href');
+		var load = ('#'+link);
 		$('a').removeClass('playing');
 		$(this).addClass('playing');
+		$('.main').hide();
+		$(load).slideDown();
 	});
 
-	// footer links
-	// $("footer").find('a').hover(
-	// 	function(){
-	// 		$(this).animate({backgroundColor: "#ff0000"}, 200);
-	// 	},
-	// 	function(){
-	// 		$(this).animate({backgroundColor:"#969696"}, 200);
-	// 	}
-	// );
 });
