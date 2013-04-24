@@ -147,6 +147,8 @@ section {
 			&:hover{
 				color: $red;
 			}
+
+
 			/*grey circle*/
 			&:before{
 				position:absolute;
@@ -195,8 +197,29 @@ section {
 					border-right: 10px solid $midgray;
 				}
 			}
-			/*display: inline-block;*/
 		}
+		.video-nav{
+			li{
+				background:url(/img/warrior.png) no-repeat center;
+				padding: 5px;
+				@include border-radius(14px);
+				@include box-shadow(0 0 10px black);
+				a{
+					height: 85px;
+					@include single-text-shadow(none);
+					&:before{
+						@include box-shadow(none);
+					}
+					&.playing{
+						background:none ;
+						border-top: 0;
+						@include box-shadow(none);
+					}
+
+				}
+			}
+		}
+
 	}
 }
 @media (max-width: 980px){

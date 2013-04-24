@@ -264,13 +264,12 @@ section nav a {
   border-radius: 14px;
   /*grey circle*/
   /*arrow*/
-  /*display: inline-block;*/
 }
 /* line 147, ../sass/screen.scss */
 section nav a:hover {
   color: red;
 }
-/* line 151, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 section nav a:before {
   position: absolute;
   top: 0;
@@ -289,12 +288,12 @@ section nav a:before {
   -o-border-radius: 14px;
   border-radius: 14px;
 }
-/* line 164, ../sass/screen.scss */
+/* line 166, ../sass/screen.scss */
 section nav a:hover:before {
   background-color: red;
   border-top: red;
 }
-/* line 166, ../sass/screen.scss */
+/* line 168, ../sass/screen.scss */
 section nav a:after {
   position: absolute;
   top: 6px;
@@ -306,7 +305,7 @@ section nav a:after {
   border-bottom: 6px solid transparent;
   border-left: 10px solid #303030;
 }
-/* line 178, ../sass/screen.scss */
+/* line 180, ../sass/screen.scss */
 section nav a.playing {
   color: #303030;
   text-shadow: none;
@@ -317,7 +316,7 @@ section nav a.playing {
   -moz-box-shadow: 0 0 10px black;
   box-shadow: 0 0 10px black;
 }
-/* line 185, ../sass/screen.scss */
+/* line 187, ../sass/screen.scss */
 section nav a.playing:before {
   background: none;
   -webkit-box-shadow: none;
@@ -325,7 +324,7 @@ section nav a.playing:before {
   box-shadow: none;
   border-top: none;
 }
-/* line 191, ../sass/screen.scss */
+/* line 193, ../sass/screen.scss */
 section nav a.playing:after {
   top: 5px;
   -webkit-box-shadow: none;
@@ -334,19 +333,51 @@ section nav a.playing:after {
   border-left: transparent;
   border-right: 10px solid #303030;
 }
+/* line 202, ../sass/screen.scss */
+section nav .video-nav li {
+  background: url(/img/warrior.png) no-repeat center;
+  padding: 5px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+  border-radius: 14px;
+  -webkit-box-shadow: 0 0 10px black;
+  -moz-box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px black;
+}
+/* line 207, ../sass/screen.scss */
+section nav .video-nav li a {
+  height: 85px;
+  text-shadow: none;
+}
+/* line 210, ../sass/screen.scss */
+section nav .video-nav li a:before {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 213, ../sass/screen.scss */
+section nav .video-nav li a.playing {
+  background: none;
+  border-top: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
 
 @media (max-width: 980px) {
-  /* line 203, ../sass/screen.scss */
+  /* line 226, ../sass/screen.scss */
   section {
     width: 705px;
   }
 
-  /* line 206, ../sass/screen.scss */
+  /* line 229, ../sass/screen.scss */
   .main {
     margin-right: 0;
   }
 }
-/* line 212, ../sass/screen.scss */
+/* line 235, ../sass/screen.scss */
 footer {
   -webkit-box-shadow: black 0 0 10px;
   -moz-box-shadow: black 0 0 10px;
@@ -357,17 +388,17 @@ footer {
   bottom: 0;
   width: 100%;
 }
-/* line 219, ../sass/screen.scss */
+/* line 242, ../sass/screen.scss */
 footer ul {
   display: table;
   margin: 5px auto;
 }
-/* line 222, ../sass/screen.scss */
+/* line 245, ../sass/screen.scss */
 footer ul li {
   display: inline;
   padding: 0 10px;
 }
-/* line 225, ../sass/screen.scss */
+/* line 248, ../sass/screen.scss */
 footer ul li a {
   display: inline-block;
   background: url(/img/socialsprite.png) 0 0 #969696;
@@ -379,15 +410,15 @@ footer ul li a {
   -o-border-radius: 16px;
   border-radius: 16px;
 }
-/* line 228, ../sass/screen.scss */
+/* line 251, ../sass/screen.scss */
 footer ul li a#youtube {
   background-position: 32px 0;
 }
-/* line 229, ../sass/screen.scss */
+/* line 252, ../sass/screen.scss */
 footer ul li a#facebook {
   background-position: 64px 0;
 }
-/* line 233, ../sass/screen.scss */
+/* line 256, ../sass/screen.scss */
 footer ul li a:hover {
   background-color: red;
 }
