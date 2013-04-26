@@ -12,7 +12,7 @@ var textRed = function(){$(this).animate({color: "#ff0000"}, 200);}
 	// 		$(this).animate({color: "#434343"}, 200);
 	// 	});
 
-	// main navigation
+	// main navigation 
 	$("#main-nav li").click(function(e){
 		e.preventDefault();
 		var link = $(this).find('a').data('link');
@@ -24,15 +24,21 @@ var textRed = function(){$(this).animate({color: "#ff0000"}, 200);}
 		$(this).find('a').addClass('active');
 		$('section').hide().slideDown();
 	});
-	// second nav
+	// music nav 
 	$('section.open').find('a').on('click', function(event){
 		event.preventDefault();
 		var link = $(this).attr('href');
 		var load = ('#'+link);
 		$('a').removeClass('playing');
-		$(this).addClass('playing');
+		$(this).addClass('playin');
 		$('.main').hide();
 		$(load).slideDown();
 	});
+	// video section
+	$('.video-nav').click(function(){
+		// hide main section
+		// load section
+		// slideDown
+	})
 
 });
