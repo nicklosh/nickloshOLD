@@ -407,18 +407,19 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 100;
 }
-/* line 257, ../sass/screen.scss */
+/* line 258, ../sass/screen.scss */
 footer ul {
   display: table;
   margin: 5px auto;
 }
-/* line 260, ../sass/screen.scss */
+/* line 261, ../sass/screen.scss */
 footer ul li {
   display: inline;
   padding: 0 10px;
 }
-/* line 263, ../sass/screen.scss */
+/* line 264, ../sass/screen.scss */
 footer ul li a {
   display: inline-block;
   background: url(/img/socialsprite.png) 0 0 #969696;
@@ -430,15 +431,15 @@ footer ul li a {
   -o-border-radius: 16px;
   border-radius: 16px;
 }
-/* line 266, ../sass/screen.scss */
+/* line 267, ../sass/screen.scss */
 footer ul li a#youtube {
   background-position: 32px 0;
 }
-/* line 267, ../sass/screen.scss */
+/* line 268, ../sass/screen.scss */
 footer ul li a#facebook {
   background-position: 64px 0;
 }
-/* line 271, ../sass/screen.scss */
+/* line 272, ../sass/screen.scss */
 footer ul li a:hover {
   background-color: red;
 }

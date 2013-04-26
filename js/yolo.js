@@ -24,14 +24,14 @@ var textRed = function(){$(this).animate({color: "#ff0000"}, 200);}
 		$(this).find('a').addClass('active');
 		$('section').hide().slideDown();
 	});
-	// music nav 
+	// nav 
 	$('section.open').find('a').on('click', function(event){
 		event.preventDefault();
 		var link = $(this).attr('href');
 		var load = ('#'+link);
-		$('a').removeClass('playing');
-		$(this).addClass('playin');
-		$('.main').hide();
+		$(this).closest('nav').find('a').removeClass('playing');
+		$(this).addClass('playing');
+		$(this).closest('div').find('.main').hide();
 		$(load).slideDown();
 	});
 	// video section
