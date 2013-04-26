@@ -204,11 +204,26 @@ section {
 				padding: 5px;
 				@include border-radius(14px);
 				@include box-shadow(0 0 10px black);
+				position: relative;
+				&:after{
+					position:absolute;
+					top: 0;
+					left:0;
+					width: 180px;
+					height: 101px;
+					content: "";
+					@include border-radius(14px);
+					background-color: $black;
+					opacity: .8;
+					z-index: 10;
+				}
 				a{
 					height: 85px;
 					@include single-text-shadow(none);
+					z-index: 20;
 					&:before{
 						@include box-shadow(none);
+						border-top: none;
 					}
 					&.playing{
 						background:none ;
