@@ -335,19 +335,27 @@ section nav a.playing:after {
 }
 /* line 202, ../sass/screen.scss */
 section nav .video-nav li {
-  background: url(/img/warrior.png) no-repeat center;
+  background: no-repeat center;
   padding: 5px;
-  -webkit-border-radius: 14px;
-  -moz-border-radius: 14px;
-  -ms-border-radius: 14px;
-  -o-border-radius: 14px;
-  border-radius: 14px;
+  /*@include border-radius(14px);*/
   -webkit-box-shadow: 0 0 10px black;
   -moz-box-shadow: 0 0 10px black;
   box-shadow: 0 0 10px black;
   position: relative;
 }
-/* line 208, ../sass/screen.scss */
+/* line 204, ../sass/screen.scss */
+section nav .video-nav li#the-west {
+  background-image: url(/img/the_west.png);
+}
+/* line 205, ../sass/screen.scss */
+section nav .video-nav li#warriorvid {
+  background-image: url(/img/warrior.png);
+}
+/* line 206, ../sass/screen.scss */
+section nav .video-nav li#crisis {
+  background-image: url(/img/crisis.png);
+}
+/* line 211, ../sass/screen.scss */
 section nav .video-nav li:after {
   position: absolute;
   top: 0;
@@ -355,29 +363,33 @@ section nav .video-nav li:after {
   width: 180px;
   height: 101px;
   content: "";
-  -webkit-border-radius: 14px;
-  -moz-border-radius: 14px;
-  -ms-border-radius: 14px;
-  -o-border-radius: 14px;
-  border-radius: 14px;
+  /*@include border-radius(14px);*/
   background-color: black;
-  opacity: .8;
+  opacity: .7;
   z-index: 10;
 }
-/* line 220, ../sass/screen.scss */
+/* line 223, ../sass/screen.scss */
+section nav .video-nav li:hover:after {
+  opacity: .0;
+}
+/* line 226, ../sass/screen.scss */
+section nav .video-nav li.playing:after {
+  background-color: white;
+}
+/* line 229, ../sass/screen.scss */
 section nav .video-nav li a {
   height: 85px;
   text-shadow: none;
   z-index: 20;
 }
-/* line 224, ../sass/screen.scss */
+/* line 233, ../sass/screen.scss */
 section nav .video-nav li a:before {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
   border-top: none;
 }
-/* line 228, ../sass/screen.scss */
+/* line 237, ../sass/screen.scss */
 section nav .video-nav li a.playing {
   background: none;
   border-top: 0;
@@ -385,19 +397,23 @@ section nav .video-nav li a.playing {
   -moz-box-shadow: none;
   box-shadow: none;
 }
+/* line 242, ../sass/screen.scss */
+section nav .video-nav li a:hover {
+  opacity: .0;
+}
 
 @media (max-width: 980px) {
-  /* line 241, ../sass/screen.scss */
+  /* line 252, ../sass/screen.scss */
   section {
     width: 705px;
   }
 
-  /* line 244, ../sass/screen.scss */
+  /* line 255, ../sass/screen.scss */
   .main {
     margin-right: 0;
   }
 }
-/* line 250, ../sass/screen.scss */
+/* line 261, ../sass/screen.scss */
 footer {
   -webkit-box-shadow: black 0 0 10px;
   -moz-box-shadow: black 0 0 10px;
@@ -409,17 +425,17 @@ footer {
   width: 100%;
   z-index: 100;
 }
-/* line 258, ../sass/screen.scss */
+/* line 269, ../sass/screen.scss */
 footer ul {
   display: table;
   margin: 5px auto;
 }
-/* line 261, ../sass/screen.scss */
+/* line 272, ../sass/screen.scss */
 footer ul li {
   display: inline;
   padding: 0 10px;
 }
-/* line 264, ../sass/screen.scss */
+/* line 275, ../sass/screen.scss */
 footer ul li a {
   display: inline-block;
   background: url(/img/socialsprite.png) 0 0 #969696;
@@ -431,15 +447,15 @@ footer ul li a {
   -o-border-radius: 16px;
   border-radius: 16px;
 }
-/* line 267, ../sass/screen.scss */
+/* line 278, ../sass/screen.scss */
 footer ul li a#youtube {
   background-position: 32px 0;
 }
-/* line 268, ../sass/screen.scss */
+/* line 279, ../sass/screen.scss */
 footer ul li a#facebook {
   background-position: 64px 0;
 }
-/* line 272, ../sass/screen.scss */
+/* line 283, ../sass/screen.scss */
 footer ul li a:hover {
   background-color: red;
 }

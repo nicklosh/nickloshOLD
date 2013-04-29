@@ -34,6 +34,8 @@ $.ajaxSetup({cache: false });
 		var link = $(this).attr('href');
 		var linkid = ('div#'+link)
 		var video = ('sections/video/'+link+'.html');
+		$('li').removeClass('playing');
+		$(this).parent().addClass('playing');
 		$('div#video').find('.main').load(video, function(){
 			$(this).slideDown();
 		})

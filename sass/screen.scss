@@ -200,9 +200,12 @@ section {
 		}
 		.video-nav{
 			li{
-				background:url(/img/warrior.png) no-repeat center;
+				background: no-repeat center;
+				&#the-west{background-image:url(/img/the_west.png);}
+				&#warriorvid{background-image:url(/img/warrior.png);}
+				&#crisis{background-image:url(/img/crisis.png);}
 				padding: 5px;
-				@include border-radius(14px);
+				/*@include border-radius(14px);*/
 				@include box-shadow(0 0 10px black);
 				position: relative;
 				&:after{
@@ -212,10 +215,16 @@ section {
 					width: 180px;
 					height: 101px;
 					content: "";
-					@include border-radius(14px);
+					/*@include border-radius(14px);*/
 					background-color: $black;
-					opacity: .8;
+					opacity: .7;
 					z-index: 10;
+				}
+				&:hover:after{
+					opacity: .0;
+				}
+				&.playing:after{
+					background-color: $white;
 				}
 				a{
 					height: 85px;
@@ -230,11 +239,13 @@ section {
 						border-top: 0;
 						@include box-shadow(none);
 					}
+					&:hover{
+						opacity: .0;
+					}
 
 				}
 			}
 		}
-
 	}
 }
 @media (max-width: 980px){
