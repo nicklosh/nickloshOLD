@@ -17,9 +17,13 @@ $.ajaxSetup({cache: false });
 			$(load).show();
 			$('section').slideDown();	
 		});
+		// if #contact section.addClass 'nonav'
+
+		// else
+		$('section').removeClass('nonav');
 	});
 	// nav 
-	$('section.open').find('a').on('click', function(e){
+	$('section.open nav').find('a').on('click', function(e){
 		e.preventDefault();
 		var link = $(this).attr('href');
 		var load = ('#'+link);
