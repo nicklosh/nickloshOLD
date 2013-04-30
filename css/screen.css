@@ -71,11 +71,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /*_variables*/
 /* line 7, ../sass/screen.scss */
 html {
-  background: url('/img/bull3d.png?1366185948') no-repeat center 140px, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #303030), color-stop(100%, #1a1a1a));
-  background: url('/img/bull3d.png?1366185948') no-repeat center 140px, -webkit-linear-gradient(top, #303030, #1a1a1a);
-  background: url('/img/bull3d.png?1366185948') no-repeat center 140px, -moz-linear-gradient(top, #303030, #1a1a1a);
-  background: url('/img/bull3d.png?1366185948') no-repeat center 140px, -o-linear-gradient(top, #303030, #1a1a1a);
-  background: url('/img/bull3d.png?1366185948') no-repeat center 140px, linear-gradient(top, #303030, #1a1a1a);
+  background: url('/img/bull3d.png?1366365253') no-repeat center 140px, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #303030), color-stop(100%, #1a1a1a));
+  background: url('/img/bull3d.png?1366365253') no-repeat center 140px, -webkit-linear-gradient(top, #303030, #1a1a1a);
+  background: url('/img/bull3d.png?1366365253') no-repeat center 140px, -moz-linear-gradient(top, #303030, #1a1a1a);
+  background: url('/img/bull3d.png?1366365253') no-repeat center 140px, -o-linear-gradient(top, #303030, #1a1a1a);
+  background: url('/img/bull3d.png?1366365253') no-repeat center 140px, linear-gradient(top, #303030, #1a1a1a);
   min-height: 100%;
   min-width: 500px;
 }
@@ -342,6 +342,9 @@ section nav .video-nav li {
   -moz-box-shadow: 0 0 10px black;
   box-shadow: 0 0 10px black;
   position: relative;
+  /*&:hover:after{
+  	opacity: .0;
+  }*/
 }
 /* line 204, ../sass/screen.scss */
 section nav .video-nav li#the-west {
@@ -368,10 +371,6 @@ section nav .video-nav li:after {
   opacity: .7;
   z-index: 10;
 }
-/* line 223, ../sass/screen.scss */
-section nav .video-nav li:hover:after {
-  opacity: .0;
-}
 /* line 226, ../sass/screen.scss */
 section nav .video-nav li.playing:after {
   background-color: white;
@@ -381,6 +380,9 @@ section nav .video-nav li a {
   height: 85px;
   text-shadow: none;
   z-index: 20;
+  /*&:hover{
+  	opacity: .0;
+  }*/
 }
 /* line 233, ../sass/screen.scss */
 section nav .video-nav li a:before {
@@ -396,10 +398,6 @@ section nav .video-nav li a.playing {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-}
-/* line 242, ../sass/screen.scss */
-section nav .video-nav li a:hover {
-  opacity: .0;
 }
 
 @media (max-width: 980px) {
@@ -419,7 +417,7 @@ footer {
   -moz-box-shadow: black 0 0 10px;
   box-shadow: black 0 0 10px;
   background: #303030;
-  border-top: 1px solid #444;
+  border-top: 1px solid #444444;
   position: fixed;
   bottom: 0;
   width: 100%;
