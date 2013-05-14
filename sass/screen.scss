@@ -128,11 +128,12 @@ section {
 	}
 	#contact .main{
 		display: block;
+		margin-left: 95px;
 	}
 
 /* second navigation
 */
-	nav{ 
+	nav, .main ul{ 
 		width: 180px; 
 		float: left; 
 		margin: 0 0 25px;
