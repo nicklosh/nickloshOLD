@@ -261,6 +261,9 @@ section {
 	}
 	.main{
 		margin-right: 0;
+		#contact &{
+			width: 430px;
+		}
 	}
 }
 
