@@ -71,11 +71,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /*_variables*/
 /* line 7, ../sass/screen.scss */
 html {
-  background: url('/img/bull3d.png?1366185948') no-repeat center 140px, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #303030), color-stop(100%, #1a1a1a));
-  background: url('/img/bull3d.png?1366185948') no-repeat center 140px, -webkit-linear-gradient(top, #303030, #1a1a1a);
-  background: url('/img/bull3d.png?1366185948') no-repeat center 140px, -moz-linear-gradient(top, #303030, #1a1a1a);
-  background: url('/img/bull3d.png?1366185948') no-repeat center 140px, -o-linear-gradient(top, #303030, #1a1a1a);
-  background: url('/img/bull3d.png?1366185948') no-repeat center 140px, linear-gradient(top, #303030, #1a1a1a);
+  background: url('/img/bull3d.png?1392675066') no-repeat center 140px, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #303030), color-stop(100%, #1a1a1a)) 0px;
+  background: url('/img/bull3d.png?1392675066') no-repeat center 140px, -webkit-linear-gradient(top, #303030, #1a1a1a) 0px;
+  background: url('/img/bull3d.png?1392675066') no-repeat center 140px, -moz-linear-gradient(top, #303030, #1a1a1a) 0px;
+  background: url('/img/bull3d.png?1392675066') no-repeat center 140px, -o-linear-gradient(top, #303030, #1a1a1a) 0px;
+  background: url('/img/bull3d.png?1392675066') no-repeat center 140px, linear-gradient(top, #303030, #1a1a1a) 0px;
   min-height: 100%;
   min-width: 500px;
 }
@@ -161,8 +161,8 @@ header nav ul li a {
 }
 /* line 70, ../sass/screen.scss */
 .splash header nav ul li a {
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
   color: red;
   text-shadow: none;
   padding: 30px 280px 460px;
@@ -433,7 +433,7 @@ footer {
   -moz-box-shadow: black 0 0 10px;
   box-shadow: black 0 0 10px;
   background: #303030;
-  border-top: 1px solid #444444;
+  border-top: 1px solid #444;
   position: fixed;
   bottom: 0;
   width: 100%;

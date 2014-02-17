@@ -6,7 +6,7 @@
 
 html { 
 	@include background(image-url("/img/bull3d.png") no-repeat center 140px,
-	linear-gradient(top, #303030, #1a1a1a)); 
+	linear-gradient(top, #303030, #1a1a1a) 0px); 
 	min-height: 100%;
 	min-width: $minwidth;
 	&.splash{background: url(/img/bull-red-glow.png) no-repeat center 60px black;}
